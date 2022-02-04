@@ -7,6 +7,8 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -35,7 +37,6 @@ def get_filters():
          print('Require Correct Data')
 
             
-        
 
     print('-'*40)
     return city, month, day
@@ -159,10 +160,10 @@ def user_stats(df):
           
 
 
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # TO DO: Display earliest, most recent, and most common year of birth.
     print('The most recent year of birth is :',int(df['Birth Year'].max()))
     print('The earliest year of birth is :',int(df['Birth Year'].min()))
-    print('The most common year of birth is :',int(df['Birth Year'].mode()[0]))
+    print('The most common year of birth is the  :',int(df['Birth Year'].mode()[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
