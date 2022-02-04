@@ -139,7 +139,7 @@ def trip_duration_stats(df):
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
-    print('\nCalculating User Stats...\n')
+    print('\nCalculating User Stats..\n')
     start_time = time.time()
 
     # TO DO: Display counts of user types
@@ -158,7 +158,6 @@ def user_stats(df):
         print('no data available for washington city.')
         sys.exit(1)
           
-
 
     # TO DO: Display earliest, most recent, and most common year of birth.
     print('The most recent year of birth is :',int(df['Birth Year'].max()))
@@ -185,6 +184,9 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         raw_data(df)
+
+
+
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
